@@ -1,0 +1,28 @@
+#wrapper {
+    display: inline-block;
+    width: 950px
+    margin: 0px auto;
+    :vertical-align: center;
+}
+h2 {
+    display: inline;
+}
+.score {
+    min-width: 60px;
+    min-height: 35px;
+    border: 1px solid black;
+    display: inline;
+    vertical-align: center;
+}
+form {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 30px auto;
+    border: 3px solid black;
+    text-align: center;
+    vertical-align: top;
+}
+.activities {
+
+}
