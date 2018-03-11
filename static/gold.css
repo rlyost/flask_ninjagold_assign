@@ -11,6 +11,8 @@ h2 {
     min-width: 60px;
     min-height: 35px;
     border: 1px solid black;
+    padding: 5px;
+    font-size: 14pt;
     display: inline;
     vertical-align: center;
 }
@@ -23,6 +25,21 @@ form {
     text-align: center;
     vertical-align: top;
 }
-.activities {
-
+.places {
+    width: 950px;
+    margin: 0px auto;
+}
+.activites {
+    width: 800px;
+    height: 250px;
+    margin: 0px auto;
+    text-align: left;
+    border: 2px solid black;
+    overflow: scroll;
+}
+.green {
+    color: green;
+}
+.red {
+    color: red;
 }

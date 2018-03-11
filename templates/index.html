@@ -14,7 +14,7 @@
             <h2>Your Gold:</h2>
             <p class='score'>{{ session['your_gold'] }}</p>
         </div>
-        <div>
+        <div class='places'>
             <form action="/process_money" method="post">
                 <h2>Farm</h2>
                 <p>(earns 10-20 golds)</p>
@@ -24,13 +24,13 @@
             <form action="/process_money" method="post">
                 <h2>Cave</h2>
                 <p>(earns 5-10 golds)</p> 
-                <input type="hidden" name="cave" value="cave" />
+                <input type="hidden" name="building" value="cave" />
                 <input type="submit" value="Find Gold!"/>
             </form>
             <form action="/process_money" method="post">
                 <h2>House</h2>
                 <p>(earns 2-5 golds)</p>
-                <input type="hidden" name="house" value="house" />
+                <input type="hidden" name="building" value="house" />
                 <input type="submit" value="Find Gold!"/>
             </form>
             <form action="/process_money" method="post">
@@ -39,8 +39,17 @@
                 <input type="hidden" name="building" value="casino" />
                 <input type="submit" value="Find Gold!"/>
             </form>
-            <p>Activities:</p>
-            <div class='activites'></div>
+            <p class='activities'>Activities:</p>
+            <div class='activites'>
+                {% for x in range(session.newline+1) %}
+                    {% if session['temp'] > 0: %}
+                        <div class='green'>{{ session.activities[x] }}</div>
+                    {% else: %}
+                        <div class='red'>{{ session.activities[x] }}</div>
+                    {% endif %}     
+                {% endfor %}
+            </div>
+            <a href="/reset"><button>Reset Adventure</button></a>
         </div>
     </div>
     </body>
